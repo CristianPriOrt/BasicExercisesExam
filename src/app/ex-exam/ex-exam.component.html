@@ -1,0 +1,36 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <section class="listing-apply">
+      <h2 class="section-heading">Submit a new employee</h2>
+      <form [formGroup]="newEmployee" (submit)="submitEmployee()">
+        <label for="name">Name</label>
+        <br>
+        <input id="name" type="text" formControlName="name">
+        <br>
+
+        <label for="position">Position</label>
+        <br>
+        <input id="position" type="text" formControlName="position">
+        <br>
+
+        <label for="salary">Salary</label>
+        <br>
+        <input id="salary" type="number" formControlName="salary" (keydown)="onlyNumber($event)">
+        <br>
+
+        <label for="city">City</label>
+        <br>
+        <input id="city" type="text" formControlName="city">
+        <br>
+        <br>
+
+        <button type="submit" class="primary">Submit</button>
+      </form>
+      <br>
+      <button type="submit" class="primary" (click)="clearSubmittedEmployees()">Delete submitted employees</button>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<h1>Exercice 6</h1>
+<h2>Fahrenheit/Celsius conversion</h2>
+Celcius:
+<input [(ngModel)]="celcius" name="celcius" (keyup)="converToFahrenheit()" (keypress)="onlyNumber($event)" required>
+<br>
+Fahrenheit:
+<input [(ngModel)]="fahrenheit" (keyup)="convertToCelcius()" (keypress)="onlyNumber($event)" required>
+<br>
+<button (click)="clear()">Reset</button>
+
